@@ -46,7 +46,7 @@ static void get_exe_filename(char *buf, int sz) {
 
 static void init_window_icon(void) {
 #ifndef _WIN32
-  #include "../icon.inl"
+  #include "icon.h"
   (void) icon_rgba_len; /* unused */
   SDL_Surface *surf = SDL_CreateRGBSurfaceFrom(
     icon_rgba, 64, 64,
