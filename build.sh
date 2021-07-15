@@ -10,6 +10,7 @@ if command -v ccache >/dev/null; then
   compiler="ccache $compiler"
 fi
 
+echo "compiling..."
 for f in `find src -name "*.c"`; do
   $compiler -c $cflags $f -o "${f//\//_}.o"
   if [[ $? -ne 0 ]]; then
